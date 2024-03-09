@@ -1,0 +1,1 @@
+count(//cd[year>=1980 and year<1990])

@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<agenda xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:noNamespaceSchemaLocation="agenda.xsd">
+    <evento data="2010-09-23">
+        <horario>15:00:00</horario>
+        <titulo>Palestra XSD</titulo>
+        <descricao>Palestra XSD avançada</descricao>
+        <local>Núcleo</local>
+    </evento>
+    <evento data="2005-12-25">
+        <horario>20:30:00</horario>
+        <local>UFRJ</local>
+        <descricao>Palestra com conceitos e aprofundamentos em xml</descricao>
+        <titulo>Palestra XML</titulo>
+    </evento>
+    <evento data="2019-03-12">
+        <horario>03:00:00</horario>
+        <titulo>Treino de Bombeiros</titulo>
+        <local>Rio Doce</local>
+        <descricao>Treinamento matinal de bombeiros</descricao>
+    </evento>
+</agenda>

@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<cd_review_list>
+    <cd_review author="Joe">
+        <cd>
+            <author>Dimmu Borgir</author>
+            <title>Death Cult Armageddon</title>
+        </cd>
+        <review>
+            I heard all of the latest reports of the forthcoming which has been since released, 
+            Silenoz said that it was going to be the most apocalyptic and bombastic CD. 
+            To be honest, I think it's more majestic, symphonic and grandiose. ...
+        </review>
+    </cd_review>
+    <cd_review author="Alex">
+        <cd>
+            <author>Orphanage</author>
+            <title>Inside</title>
+        </cd>
+        <review>
+            Whoa, the Dutch team has changed quite a bit... 
+            From the beginning of the opening "Grip" you realise that the guitars and bass sound 
+            very modern, hm. Add the harsh voice of George Oosthoek and you have a 
+            completely un-atmospheric atmosphere, which...
+        </review>
+    </cd_review>
+</cd_review_list>

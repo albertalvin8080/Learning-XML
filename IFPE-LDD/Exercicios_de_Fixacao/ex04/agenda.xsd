@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+    <xs:element name="agenda">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="evento" minOccurs="1" maxOccurs="unbounded">
+                    <xs:complexType>
+                        <xs:all>
+                            <xs:element name="horario" type="xs:time"></xs:element>
+                            <xs:element name="titulo" type="xs:string"></xs:element>
+                            <xs:element name="local" type="xs:string"></xs:element>
+                            <xs:element name="descricao" type="xs:string"></xs:element>
+                        </xs:all>
+                        <xs:attribute name="data" type="xs:date"></xs:attribute>
+                    </xs:complexType>
+                </xs:element>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+</xs:schema>

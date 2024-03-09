@@ -1,0 +1,1 @@
+count(distinct-values(//cd/artist))

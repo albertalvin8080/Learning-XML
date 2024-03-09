@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<loteca concurso="111" data="2023-09-02" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="letraA.xsd">
+    <jogo resultado="E">
+        <mandante>Clecio Sena</mandante>
+        <visitante>Juventos</visitante>
+    </jogo>
+    <jogo resultado="V">
+        <mandante>Clecio Sena</mandante>
+        <visitante>Juventos</visitante>
+    </jogo>
+    <jogo resultado="M">
+        <mandante>Clecio Sena</mandante>
+        <visitante>Juventos</visitante>
+    </jogo>
+</loteca>

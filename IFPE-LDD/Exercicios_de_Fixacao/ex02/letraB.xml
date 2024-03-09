@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<receita>
+    <tempo-preparo unidade="minutos">50</tempo-preparo>
+    <rendimento>1 bolão</rendimento>
+    <ingredientes>
+
+        <ingrediente>
+            <nome>Ovo</nome>
+            <quantidade unidade="undefined">2</quantidade>
+        </ingrediente>
+
+        <ingrediente>
+            <nome>Farinha</nome>
+            <quantidade unidade="gramas">500</quantidade>
+        </ingrediente>
+
+        <ingrediente>
+            <nome>Baunilha</nome>
+            <quantidade unidade="mililitros">2</quantidade>
+        </ingrediente>
+
+    </ingredientes>
+    <modo-preparo>
+        <![CDATA[Quebre seus dois ovos numa caçarola, coloque a farinha e a baunilha. Misture bem até ficar homogêneo. Leve ao forno por 50 minutos a -273.5°C]]>
+    </modo-preparo>
+</receita>

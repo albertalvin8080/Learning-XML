@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+    <xs:element name="dictionary">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="entry" minOccurs="1" maxOccurs="unbounded">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="title">
+                                <xs:complexType mixed="true">
+                                    <xs:sequence>
+                                        <xs:element name="csc" minOccurs="0" maxOccurs="unbounded" type="xs:string"></xs:element>
+                                    </xs:sequence>
+                                </xs:complexType>
+                            </xs:element>
+                            <xs:element name="body">
+                                <xs:complexType mixed="true">
+                                    <xs:choice minOccurs="0" maxOccurs="unbounded">
+                                        <xs:element name="p" minOccurs="0" maxOccurs="unbounded">
+                                            <xs:complexType mixed="true">
+                                                <xs:choice minOccurs="0" maxOccurs="unbounded">
+                                                    <xs:element name="q" minOccurs="0" maxOccurs="unbounded">
+                                                        <xs:complexType mixed="true">
+                                                            <xs:choice minOccurs="0" maxOccurs="unbounded">
+                                                                <xs:element name="sc" minOccurs="0" maxOccurs="unbounded" type="romanicType"></xs:element>
+                                                            </xs:choice>
+                                                            <xs:attribute name="date" type="yearType"></xs:attribute>
+                                                        </xs:complexType>
+                                                    </xs:element>
+                                                    <xs:element name="sc" minOccurs="0" maxOccurs="unbounded" type="romanicType"></xs:element>
+                                                    <xs:element name="date" minOccurs="0" maxOccurs="unbounded">
+                                                        <xs:complexType>
+                                                            <xs:simpleContent>
+                                                                <xs:extension base="yearType">
+                                                                    <xs:attribute name="event" type="xs:string"></xs:attribute>
+                                                                </xs:extension>
+                                                            </xs:simpleContent>
+                                                        </xs:complexType>
+                                                    </xs:element>
+                                                    <xs:element name="csc" type="xs:string"></xs:element>
+                                                </xs:choice>
+                                            </xs:complexType>
+                                        </xs:element>
+                                    </xs:choice>
+                                </xs:complexType>
+                            </xs:element>
+                        </xs:sequence>
+                        <xs:attribute name="birthplace" type="xs:string"></xs:attribute>
+                        <xs:attribute name="id" type="xs:string"></xs:attribute>
+                        <xs:attribute name="born" type="yearType"></xs:attribute>
+                        <xs:attribute name="died" type="yearType"></xs:attribute>
+                    </xs:complexType>
+                </xs:element>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+    <xs:simpleType name="yearType">
+        <xs:restriction base="xs:integer">
+            <xs:pattern value="\d{1,4}"></xs:pattern>
+        </xs:restriction>
+    </xs:simpleType>
+
+    <xs:simpleType name="romanicType">
+        <xs:restriction base="xs:string">
+            <xs:pattern value="[iIvVxXlL]+"></xs:pattern>
+        </xs:restriction>
+    </xs:simpleType>
+</xs:schema>

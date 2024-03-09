@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<parts>
+    <part>
+        <name>Widget</name>
+        <catalog.number>11037</catalog.number>
+        <price.code>d
+        </price.code>
+            <quantity>4</quantity>
+    </part>
+    <part>
+        <name>Bolt</name>
+        <catalog.number>11497</catalog.number>
+        <thread>w</thread>
+        <price.code>1</price.code>
+        <quantity>100</quantity>
+    </part>
+    <part>
+        <name>Screw</name>
+        <catalog.number>10020</catalog.number>
+        <type>countersunk</type>
+        <price.code>7</price.code>
+        <quantity>c</quantity>
+    </part>
+</parts>

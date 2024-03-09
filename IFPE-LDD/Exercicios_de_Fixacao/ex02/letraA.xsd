@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+    <xs:element name="loteca">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="jogo" minOccurs="1" maxOccurs="unbounded" type="jogoType"></xs:element>
+            </xs:sequence>
+            <xs:attribute name="concurso" type="xs:integer" />
+            <xs:attribute name="data" type="xs:date" />
+        </xs:complexType>
+    </xs:element>
+
+    <xs:complexType name="jogoType">
+        <xs:sequence>
+            <xs:element name="mandante">
+                <xs:simpleType>
+                    <xs:restriction base="xs:string">
+                        <xs:maxLength value="100"></xs:maxLength>
+                    </xs:restriction>
+                </xs:simpleType>
+            </xs:element>
+            <xs:element name="visitante">
+                <xs:simpleType>
+                    <xs:restriction base="xs:string">
+                        <xs:maxLength value="100"></xs:maxLength>
+                    </xs:restriction>
+                </xs:simpleType>
+            </xs:element>
+        </xs:sequence>
+        <xs:attribute name="resultado">
+            <xs:simpleType>
+                <xs:restriction base="xs:string">
+                    <xs:enumeration value="M"></xs:enumeration>
+                    <xs:enumeration value="E"></xs:enumeration>
+                    <xs:enumeration value="V"></xs:enumeration>
+                </xs:restriction>
+            </xs:simpleType>
+        </xs:attribute>
+    </xs:complexType>
+
+</xs:schema>

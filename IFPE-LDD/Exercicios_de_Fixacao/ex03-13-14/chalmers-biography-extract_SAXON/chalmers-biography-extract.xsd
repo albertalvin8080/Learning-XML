@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+    <xs:element name="dictionary">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="entry" minOccurs="1" maxOccurs="unbounded">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="title">
+                                <xs:complexType mixed="true">
+                                    <xs:sequence>
+                                        <xs:element name="csc" minOccurs="0" maxOccurs="unbounded" type="xs:string"></xs:element>
+                                    </xs:sequence>
+                                </xs:complexType>
+                            </xs:element>
+                            <xs:element name="body">
+                                <xs:complexType mixed="false">
+                                    <xs:sequence>
+                                        <xs:element name="p" maxOccurs="unbounded" minOccurs="0">
+                                            <xs:complexType mixed="true">
+                                                <xs:choice minOccurs="0" maxOccurs="unbounded">
+                                                    <xs:element name="csc" type="xs:string" minOccurs="0" maxOccurs="unbounded"></xs:element>
+                                                    <xs:element name="q" minOccurs="0" maxOccurs="unbounded">
+                                                        <xs:complexType mixed="true">
+                                                            <xs:sequence>
+                                                                <xs:element name="sc" minOccurs="0" type="xs:string" maxOccurs="unbounded"></xs:element>
+                                                            </xs:sequence>
+                                                            <xs:attribute name="date" use="optional">
+                                                                <xs:simpleType>
+                                                                    <xs:restriction base="xs:decimal">
+                                                                        <xs:pattern value="\d{1,4}"></xs:pattern>
+                                                                    </xs:restriction>
+                                                                </xs:simpleType>
+                                                            </xs:attribute>
+                                                        </xs:complexType>
+                                                    </xs:element>
+                                                    <xs:element name="date" minOccurs="0" maxOccurs="unbounded">
+                                                        <xs:complexType>
+                                                            <xs:simpleContent>
+                                                                <xs:extension base="xs:decimal">
+                                                                    <xs:attribute name="event" type="xs:string"></xs:attribute>
+                                                                </xs:extension>
+                                                            </xs:simpleContent>
+                                                        </xs:complexType>
+                                                    </xs:element>
+                                                    <xs:element name="sc" type="xs:string" maxOccurs="unbounded" minOccurs="0" ></xs:element>
+                                                </xs:choice>
+                                            </xs:complexType>
+                                        </xs:element>
+                                    </xs:sequence>
+                                </xs:complexType>
+                            </xs:element>
+                        </xs:sequence>
+                        <xs:attribute name="birthplace" type="xs:string" use="optional"></xs:attribute>
+                        <xs:attribute name="id" type="xs:string" use="optional"></xs:attribute>
+                        <xs:attribute name="born" type="year-type" use="optional"></xs:attribute>
+                        <xs:attribute name="died" type="year-type" use="optional"></xs:attribute>
+                    </xs:complexType>
+                </xs:element>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+    <!-- type for attributes 'born' and 'died' inside 'entry' -->
+    <xs:simpleType name="year-type">
+        <xs:restriction base="xs:decimal">
+            <xs:pattern value="\d{1,4}"></xs:pattern>
+        </xs:restriction>
+    </xs:simpleType>
+</xs:schema>

@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+    <xs:element name="catalog">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="cd" minOccurs="1" maxOccurs="unbounded">
+                    <xs:complexType>
+                        <xs:all>
+                            <xs:element name="artist">
+                                <xs:simpleType>
+                                    <xs:restriction base="xs:string">
+                                        <!-- deve tirar os espços automaticamente em algum momento -->
+                                        <xs:whiteSpace value="collapse"></xs:whiteSpace>
+                                    </xs:restriction>
+                                </xs:simpleType>
+                            </xs:element>
+                            <xs:element name="title" type="xs:string"></xs:element>
+                            <xs:element name="country" type="xs:string"></xs:element>
+                            <xs:element name="company" type="xs:string"></xs:element>
+                            <xs:element name="price" type="xs:decimal"></xs:element>
+                            <xs:element name="year">
+                                <xs:simpleType>
+                                    <xs:restriction base="xs:string">
+                                        <xs:pattern value="[0-9]\d{3}"></xs:pattern>
+                                    </xs:restriction>
+                                </xs:simpleType>
+                            </xs:element>
+                        </xs:all>
+                    </xs:complexType>
+                </xs:element>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+</xs:schema>

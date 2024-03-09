@@ -1,0 +1,1 @@
+//cd[company="Polydor"]/artist/text()

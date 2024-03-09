@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+    <xs:element name="cb">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="rodada" minOccurs="1" maxOccurs="unbounded">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="jogo" minOccurs="1" maxOccurs="unbounded">
+                                <xs:complexType>
+                                    <xs:sequence>
+                                        <xs:element name="mandante" type="type-time-gols"></xs:element>
+                                        <xs:element name="visitante" type="type-time-gols"></xs:element>
+                                    </xs:sequence>
+                                </xs:complexType>
+                            </xs:element>
+                        </xs:sequence>
+                        <xs:attribute name="n" type="xs:integer"></xs:attribute>
+                    </xs:complexType>
+                </xs:element>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+    <xs:complexType name="type-time-gols">
+        <xs:sequence>
+            <xs:element name="time" type="xs:string"></xs:element>
+            <xs:element name="gols" type="xs:integer"></xs:element>
+        </xs:sequence>
+    </xs:complexType>
+</xs:schema>
