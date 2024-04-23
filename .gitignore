@@ -1,3 +1,84 @@
-SaxonHE12-3J/
-pdf/
-**/*.html
+target/
+!.mvn/wrapper/maven-wrapper.jar
+!**/src/main/**/target/
+!**/src/test/**/target/
+
+### IntelliJ IDEA ###
+**/.idea/modules.xml
+**/.idea/jarRepositories.xml
+**/.idea/compiler.xml
+**/.idea/libraries/
+**/*.iws
+**/*.iml
+**/*.ipr
+
+### Eclipse ###
+**/.apt_generated
+**/.classpath
+**/.factorypath
+**/.project
+**/.settings
+**/.springBeans
+**/.sts4-cache
+
+### NetBeans ###
+**/nbproject/private/
+**/nbbuild/
+**/dist/
+**/nbdist/
+**/.nb-gradle/
+**/build/
+!**/src/main/**/build/
+!**/src/test/**/build/
+
+### VS Code ###
+**/.vscode/
+
+### Mac OS ###
+**/.DS_Store
+
+_GITIGNORE/
+**/*.ipch
+
+# JPA_Hibernate/first-test/mysql-data/
+**/mysql-data/
+
+**/.idea/
+**/.vscode/
+
+**/grafana-storage/
+
+# JSF/*/target/
+# JSF/*/out/
+
+**/target/
+**/out/
+
+**/mongodb_data/
+
+# C/*/*.exe
+# C/*.exe
+**/*.exe
+
+**/node_modules/
+
+*/**/.gitignore
+
+# VSCODE
+**/x64/
+**/x86/
+**/.cproject
+**/.vs
+**/_Dependencies/
+**/*.sln
+**/*.vcxproj
+**/*.vcxproj.filters
+**/*.vcxproj.user
+**/*.h.gch # compiled header files
+
+**/postgres_data/
+
+-- TESTING --
+**/*.madmoiselle
+/Web2/iCabueta/nbproject/private/
+/Web2/iCabueta_v1/nbproject/private/

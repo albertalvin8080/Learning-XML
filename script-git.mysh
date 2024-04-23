@@ -1,0 +1,12 @@
+#!/bin/bash
+
+git add .
+echo ""
+
+git commit -m shell-driven-update
+echo ""
+
+git push
+echo ""
+
+read -p "Press any key to close..."
